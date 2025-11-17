@@ -15,107 +15,139 @@ foreach ($user in $users){
     $dept = $user.department 
 
 
-#********Ajout des utilisateurs de Paris dans leurs groupes********************
+#********Ajout des utilisateurs de Lille dans leurs groupes********************
 
-if ($Uoffice -eq "Paris" -and $dept -eq "Direction"){
+if ($Uoffice -eq "Lille" -and $dept -eq "Direction"){
 
-    Add-ADGroupMember -Identity 'DirectionParis' -Members $login
-
-}
-elseif ($Uoffice -eq "Paris" -and $dept -eq "Traders"){
-
-    Add-ADGroupMember -Identity 'TradersParis' -Members $login
+    Add-ADGroupMember -Identity 'DirectionLille' -Members $login
 
 }
-elseif ($Uoffice -eq "Paris" -and $dept -eq "Secretary"){
+elseif ($Uoffice -eq "Lille" -and $dept -eq "Traders"){
 
-    Add-ADGroupMember -Identity 'SecretaryParis' -Members $login
-
-}
-elseif ($Uoffice -eq "Paris" -and $dept -eq "Accounting"){
-
-    Add-ADGroupMember -Identity 'AccountingParis' -Members $login
+    Add-ADGroupMember -Identity 'TradersLille' -Members $login
 
 }
-elseif ($Uoffice -eq "Paris" -and $dept -eq "Financial-Consultant"){
+elseif ($Uoffice -eq "Lille" -and $dept -eq "Secretary"){
 
-    Add-ADGroupMember -Identity 'Financial-ConsultantParis' -Members $login
+    Add-ADGroupMember -Identity 'SecretaryLille' -Members $login
 
 }
-elseif ($Uoffice -eq "Paris" -and $dept -eq "Sales"){
+elseif ($Uoffice -eq "Lille" -and $dept -eq "Accounting"){
 
-    Add-ADGroupMember -Identity 'SalesParis' -Members $login
+    Add-ADGroupMember -Identity 'AccountingLille' -Members $login
+
+}
+elseif ($Uoffice -eq "Lille" -and $dept -eq "Financial-Consultant"){
+
+    Add-ADGroupMember -Identity 'Financial-ConsultantLille' -Members $login
+
+}
+elseif ($Uoffice -eq "Lille" -and $dept -eq "Sales"){
+
+    Add-ADGroupMember -Identity 'SalesLille' -Members $login
 } 
 
 
-#********Ajout des users de Berlin dans leurs groupes********************
+#********Ajout des users de Dax dans leurs groupes********************
 
 
-if ($Uoffice -eq "Berlin" -and $dept -eq "Direction"){
+if ($Uoffice -eq "Dax" -and $dept -eq "Direction"){
 
-    Add-ADGroupMember -Identity 'DirectionBerlin' -Members $login
-
-}
-elseif ($Uoffice -eq "Berlin" -and $dept -eq "Traders"){
-
-    Add-ADGroupMember -Identity 'TradersBerlin' -Members $login
+    Add-ADGroupMember -Identity 'DirectionDax' -Members $login
 
 }
-elseif ($Uoffice -eq "Berlin" -and $dept -eq "Secretary"){
+elseif ($Uoffice -eq "Dax" -and $dept -eq "Traders"){
 
-    Add-ADGroupMember -Identity 'SecretaryBerlin' -Members $login
-
-}
-elseif ($Uoffice -eq "Berlin" -and $dept -eq "Accounting"){
-
-    Add-ADGroupMember -Identity 'AccountingBerlin' -Members $login
+    Add-ADGroupMember -Identity 'TradersDax' -Members $login
 
 }
-elseif ($Uoffice -eq "Berlin" -and $dept -eq "Financial-Consultant"){
+elseif ($Uoffice -eq "Dax" -and $dept -eq "Secretary"){
 
-    Add-ADGroupMember -Identity 'Financial-ConsultantBerlin' -Members $login
+    Add-ADGroupMember -Identity 'SecretaryDax' -Members $login
 
 }
-elseif ($Uoffice -eq "Berlin" -and $dept -eq "Sales"){
+elseif ($Uoffice -eq "Dax" -and $dept -eq "Accounting"){
 
-    Add-ADGroupMember -Identity 'SalesBerlin' -Members $login
+    Add-ADGroupMember -Identity 'AccountingDax' -Members $login
+
+}
+elseif ($Uoffice -eq "Dax" -and $dept -eq "Financial-Consultant"){
+
+    Add-ADGroupMember -Identity 'Financial-ConsultantDax' -Members $login
+
+}
+elseif ($Uoffice -eq "Dax" -and $dept -eq "Sales"){
+
+    Add-ADGroupMember -Identity 'SalesDax' -Members $login
 
 } 
 
 
-#********Ajout des users de Londres dans leurs groupes********************
+#********Ajout des users de Annecy dans leurs groupes********************
 
 
-if ($Uoffice -eq "Londres" -and $dept -eq "Direction"){
+if ($Uoffice -eq "Annecy" -and $dept -eq "Direction"){
 
-    Add-ADGroupMember -Identity 'DirectionLondres' -Members $login
-
-}
-elseif ($Uoffice -eq "Londres" -and $dept -eq "Traders"){
-
-    Add-ADGroupMember -Identity 'TradersLondres' -Members $login
+    Add-ADGroupMember -Identity 'DirectionAnnecy' -Members $login
 
 }
-elseif ($Uoffice -eq "Londres" -and $dept -eq "Secretary"){
+elseif ($Uoffice -eq "Annecy" -and $dept -eq "Traders"){
 
-    Add-ADGroupMember -Identity 'SecretaryLondres' -Members $login
-
-}
-elseif ($Uoffice -eq "Londres" -and $dept -eq "Accounting"){
-
-    Add-ADGroupMember -Identity 'AccountingLondres' -Members $login
+    Add-ADGroupMember -Identity 'TradersAnnecy' -Members $login
 
 }
-elseif ($Uoffice -eq "Londres" -and $dept -eq "Financial-Consultant"){
+elseif ($Uoffice -eq "Annecy" -and $dept -eq "Secretary"){
 
-    Add-ADGroupMember -Identity 'Financial-ConsultantLondres' -Members $login
-
-}
-elseif ($Uoffice -eq "Londres" -and $dept -eq "Sales"){
-
-    Add-ADGroupMember -Identity 'SalesLondres' -Members $login
+    Add-ADGroupMember -Identity 'SecretaryAnnecy' -Members $login
 
 }
+elseif ($Uoffice -eq "Annecy" -and $dept -eq "Accounting"){
 
+    Add-ADGroupMember -Identity 'AccountingAnnecy' -Members $login
+
+}
+elseif ($Uoffice -eq "Annecy" -and $dept -eq "Financial-Consultant"){
+
+    Add-ADGroupMember -Identity 'Financial-ConsultantAnnecy' -Members $login
+
+}
+elseif ($Uoffice -eq "Annecy" -and $dept -eq "Sales"){
+
+    Add-ADGroupMember -Identity 'SalesAnnecy' -Members $login
+
+}
+#********Ajout des users de Brest dans leurs groupes********************
+
+
+if ($Uoffice -eq "Brest" -and $dept -eq "Direction"){
+
+    Add-ADGroupMember -Identity 'DirectionBrest' -Members $login
+
+}
+elseif ($Uoffice -eq "Brest" -and $dept -eq "Traders"){
+
+    Add-ADGroupMember -Identity 'TradersBrest' -Members $login
+
+}
+elseif ($Uoffice -eq "Brest" -and $dept -eq "Secretary"){
+
+    Add-ADGroupMember -Identity 'SecretaryBrest' -Members $login
+
+}
+elseif ($Uoffice -eq "Brest" -and $dept -eq "Accounting"){
+
+    Add-ADGroupMember -Identity 'AccountingBrest' -Members $login
+
+}
+elseif ($Uoffice -eq "Brest" -and $dept -eq "Financial-Consultant"){
+
+    Add-ADGroupMember -Identity 'Financial-ConsultantBrest' -Members $login
+
+}
+elseif ($Uoffice -eq "Brest" -and $dept -eq "Sales"){
+
+    Add-ADGroupMember -Identity 'SalesBrest' -Members $login
+
+}
 } #Accolade fermante de notre boucle – Fin de la boucle
  

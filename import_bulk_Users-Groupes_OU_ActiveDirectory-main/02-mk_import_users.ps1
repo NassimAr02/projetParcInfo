@@ -16,9 +16,10 @@ foreach ($user in $users){
     
 
     switch($user.office){
-        "Paris" {$office = "OU=Paris,OU=Employés,DC=formation,DC=lan"}
-        "Berlin" {$office = "OU=Berlin,OU=Employés,DC=formation,DC=lan"}
-        "Londres" {$office = "OU=Londres,OU=Employés,DC=formation,DC=lan"}
+        "Lille" {$office = "OU=Lille,OU=Employés,DC=dubois,DC=local"}
+        "Brest" {$office = "OU=Brest,OU=Employés,DC=dubois,DC=local"}
+        "Dax" {$office = "OU=Dax,OU=Employés,DC=dubois,DC=local"}
+        "Annecy" {$office = "OU=Annecy,OU=Employés,DC=dubois,DC=local"}
         default {$office = $null}    
     }
     
