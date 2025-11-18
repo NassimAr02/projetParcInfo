@@ -17,7 +17,11 @@ Executez les scripts un par un dans l'ordre des numéros
         ```bash
         sudo dpkg-reconfigure keyboard-configuration
         ```
-        Choisissez PC générique 105 touches       
+        Choisissez PC générique 105 touches
+        ```bash
+        sudo service keyboard-setup restart
+        sudo reboot
+        ```       
         
 
 
@@ -28,5 +32,5 @@ Executez les scripts un par un dans l'ordre des numéros
 3) Donnez les droits d'éxécution et éxécuter le script d'installation 
     ```bash
     chmod +x \home\nomHote\install_zabbix_debian13.sh
-    \home\nomHote\install_zabbix_debian13.sh
+    .\home\nomHote\install_zabbix_debian13.sh
     ```
