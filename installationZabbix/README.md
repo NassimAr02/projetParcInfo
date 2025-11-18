@@ -10,19 +10,19 @@ Executez les scripts un par un dans l'ordre des numéros
 1) Créer une machine debian 13 en core à l'aide de l'iso que vous aurez préalablement téléchargé
     Ne Pas oublier d'activer le server SSH et de désactiver GNOME et l'interface graphique
     Vous pouvez supprimer l'interface graphique si vous l'avez installer sans le vouloir en entrant :
-    \n
+    
     ```bash
     apt-get purge gdm3
     ```
-    \n
+    
     Par défaut la machine debian peut être mis par défaut en qwerty :
-    \n
+   
     ```bash
     sudo dpkg-reconfigure keyboard-configuration
     ```
-    \n
+    
     Choisissez PC générique 105 touches
-    \n
+   
     ```bash
     sudo service keyboard-setup restart
     sudo reboot
