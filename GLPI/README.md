@@ -13,7 +13,7 @@ Si vous devez mettre à jour votre version de glpi :
 rm -Rf /var/www/html/glpi/
 ```
 
-### Télécharger la nouvelle verion de GLPI (ici 11.0.2):
+### Télécharger la nouvelle version de GLPI (ici 11.0.2):
 
 ```bash
 setfacl -R -m u:www-data:rwx /var/www/html/glpi/Files/
