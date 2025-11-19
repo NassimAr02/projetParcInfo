@@ -34,16 +34,16 @@ Si la configuration ne s'est pas appliqué redémarrer la machine
 
 ### Lancer l'éditeur de configuration du clavier
 
-    ```bash
-    sudo dpkg-reconfigure keyboard-configuration
-    ```
+```bash
+sudo dpkg-reconfigure keyboard-configuration
+```
     
  
-    Choisissez PC générique 105 touches
+Choisissez PC générique 105 touches
 ### Redémarrer pour appliquer la conf
 
-    ```bash
-    sudo service keyboard-setup restart
-    sudo reboot now
-    ```      
+```bash
+sudo service keyboard-setup restart
+sudo reboot now
+```      
 
