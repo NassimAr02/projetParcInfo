@@ -37,6 +37,7 @@ Si la configuration ne s'est pas appliqué redémarrer la machine
     ```bash
     sudo dpkg-reconfigure keyboard-configuration
     ```
+    
  
     Choisissez PC générique 105 touches
 ### Redémarrer pour appliquer la conf
