@@ -14,23 +14,6 @@ Executez les scripts un par un dans l'ordre des numéros
     ```bash
     apt-get purge gdm3
     ```
-    
-    Par défaut la machine debian peut être mis par défaut en qwerty :
-   
-    ```bash
-    sudo dpkg-reconfigure keyboard-configuration
-    ```
-    
-    Choisissez PC générique 105 touches
-   
-    ```bash
-    sudo service keyboard-setup restart
-    sudo reboot
-    ```       
-
-
-
-        
 
 
 2) Depuis un terminal powershell de votre machine locale envoyer le fichier sur le dossier /home/nomHote
