@@ -27,6 +27,9 @@ Executez les scripts un par un dans l'ordre des numéros
     sudo service keyboard-setup restart
     sudo reboot
     ```       
+
+
+
         
 
 
