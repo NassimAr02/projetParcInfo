@@ -30,3 +30,17 @@ systemctl restart networking
 
 Si la configuration ne s'est pas appliqué redémarrer la machine 
 
+## Passer en AZERTY 
+
+### Lancer l'éditeur de configuration du clavier
+```bash
+    sudo dpkg-reconfigure keyboard-configuration
+    ```
+ 
+    Choisissez PC générique 105 touches
+### Rédmarrer pour appliquer la conf
+    ```bash
+    sudo service keyboard-setup restart
+    sudo reboot now
+    ```      
+
