@@ -47,3 +47,11 @@ sudo service keyboard-setup restart
 sudo reboot now
 ```      
 
+### Télécharger Sudo + mettre son compte user en sudo
+
+```bash
+su -c "apt install sudo -y"
+su -c "/usr/sbin/usermod -aG sudo votre-user"
+```
+
+

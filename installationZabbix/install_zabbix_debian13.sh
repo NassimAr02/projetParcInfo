@@ -9,7 +9,7 @@ DB_NAME="zabbix"
 SERVER_IP=$(hostname -I | awk '{print $1}')
 
 
-# Ajout du dépôt Zabbix 7.0 pour Debian 12...
+# Ajout du dépôt Zabbix 7.4 pour Debian 13...
 echo "[1/8] ➤ Ajout du dépôt Zabbix 7.4 pour Debian 13..."
 sleep 3
 wget https://repo.zabbix.com/zabbix/7.4/release/debian/pool/main/z/zabbix-release/zabbix-release_latest_7.4+debian13_all.deb
