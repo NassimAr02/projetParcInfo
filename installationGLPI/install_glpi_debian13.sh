@@ -39,13 +39,14 @@ clear
 # Création de la base de données Glpi
 echo "[5/8] ➤ Création de la base de données Glpi..."
 sleep 3
-mysql -uroot <<EOF
-CREATE DATABASE ${DB_NAME} CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
-CREATE USER '${DB_USER}'@'localhost' IDENTIFIED BY '${DB_PASS}';
-GRANT ALL PRIVILEGES ON ${DB_NAME}.* TO '${DB_USER}'@'localhost';
+mariadb <<EOF
+CREATE DATABASE IF NOT EXISTS \`${DB_NAME}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+CREATE USER IF NOT EXISTS '${DB_USER}'@'localhost' IDENTIFIED BY '${DB_PASS}';
+GRANT ALL PRIVILEGES ON \`${DB_NAME}\`.* TO '${DB_USER}'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 clear
+
 # Création du fichier de configuration Glpi pour le serveur Apache2
 
 echo "[6/8] ➤ Création du fichier de configuration Glpi pour le serveur Apache2 ..."
@@ -53,26 +54,28 @@ cat <<EOF > /etc/apache2/sites-available/glpi.conf
 <VirtualHost *:80>
     ServerName $SERVER_NAME
     ServerAlias $SERVER_IP
-    DocumentRoot /var/www/html/glpi/public
+    DocumentRoot /var/www/html/glpi/public/index.php
 
-    <Directory /var/www/html/glpi/public>
+    <Directory /var/www/html/glpi>
         Options -Indexes +FollowSymLinks
         Require all granted
         RewriteEngine On
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteCond %{REQUEST_FILENAME} !-d
         RewriteRule ^ index.php [QSA,L]
+        AllowOverride All
     </Directory>
 
     <FilesMatch \.php$>
-        SetHandler "proxy:unix:/run/php/php8.2-fpm.sock|fcgi://localhost"
+        SetHandler "proxy:unix:/run/php/php8.4-fpm.sock|fcgi://localhost"
     </FilesMatch>
 
     ErrorLog ${APACHE_LOG_DIR}/glpi_error.log
     CustomLog ${APACHE_LOG_DIR}/glpi_access.log combined
 </VirtualHost>
+
 EOF
-Clear
+clear
 # Activation et désactivation des différents modules nécessaires
 echo "[7/8] ➤ Activation et désactivation des différents modules nécessaires ..."
 
@@ -89,6 +92,7 @@ clear
 echo "[8/8] ➤ Redémarrage du serveur Apache2 ..."
 
 systemctl restart apache2
+systemctl enable apache2
 clear
 
 echo "GLPI est prêt à être configuré dans l'interface web"
