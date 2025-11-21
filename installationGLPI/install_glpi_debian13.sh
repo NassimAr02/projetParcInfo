@@ -72,7 +72,7 @@ cat <<EOF > /etc/apache2/sites-available/glpi.conf
     CustomLog ${APACHE_LOG_DIR}/glpi_access.log combined
 </VirtualHost>
 EOF
-
+Clear
 # Activation et désactivation des différents modules nécessaires
 echo "[7/8] ➤ Activation et désactivation des différents modules nécessaires ..."
 
