@@ -47,11 +47,21 @@ sudo service keyboard-setup restart
 sudo reboot now
 ```      
 
-### Télécharger Sudo + mettre son compte user en sudo
+
+## Mettre un User dans le groupe Sudo (depuis root)
 
 ```bash
-su -c "apt install sudo -y"
-su -c "/usr/sbin/usermod -aG sudo votre-user"
+usermod -aG sudo nom_utilisateur
+exit
+logout
 ```
+## Installer SSH (S'il n'est pas présent)
 
+```bash 
+apt install openssh-server
+```
+## Changer le DNS 
 
+```bash
+sudo nano /etc/resolv.conf
+```

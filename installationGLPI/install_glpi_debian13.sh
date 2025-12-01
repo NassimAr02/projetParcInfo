@@ -11,7 +11,7 @@ SERVER_IP=$(hostname -I | awk '{print $1}')
 SERVER_NAME=$(hostname| awk '{print $1}')
 
 # Mise à jour de la machine Debian 13
-echo "[1/8] Mise à jour de la machine"
+echo "[1/8] ➤ Mise à jour de la machine"
 sleep 3
 apt update &&  apt upgrade -y
 

@@ -1,5 +1,6 @@
 #!/bin/bash
 #Installation Automatisé d'un agent zabbix pour les machines debian 13
+#par nassim.arrasspro@gmail.com
 
 SERVER_IP=xxx.xxx.xxx.xxx #Mettre l'IP du Server zabbix
 FICHIER_CONF="/etc/zabbix/zabbix_agent2.conf"
