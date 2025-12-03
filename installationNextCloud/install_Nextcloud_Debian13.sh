@@ -54,7 +54,7 @@ sleep 3
 mariadb <<EOF
 CREATE USER '${DB_USER}'@'localhost' IDENTIFIED BY '${DB_PASS}';
 
-CREATE DATABASE IF NOT EXISTS \`${DB_NAME}\`CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
+CREATE DATABASE IF NOT EXISTS \`${DB_NAME}\` CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;
 
 GRANT ALL PRIVILEGES ON \`${DB_NAME}\`.* TO '${DB_USER}'@'localhost';
 
@@ -102,3 +102,4 @@ apachectl -t
 read -n 1 -s -r -p "Appuyez sur une touche si la syntaxe est valide..."
 
 systemctl restart apache2
+reboot now
