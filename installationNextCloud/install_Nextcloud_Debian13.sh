@@ -12,8 +12,14 @@ DNS1="10.59.100.101"
 DNS2="10.59.100.101"
 echo "[0/7] ➤ Attribution d'une IP fixe"
 sleep 3
-if ! grep -q "$NETCARD_NAME" /etc/network/interfaces; then
-    cat <<EOF >> /etc/network/interfaces
+# Sauvegarde l'ancien fichier
+cp /etc/network/interfaces /etc/network/interfaces.bak
+
+# Supprime toute configuration existante pour la carte
+sed -i "/$NETCARD_NAME/,+4d" /etc/network/interfaces
+
+# Ajoute la configuration statique
+cat <<EOF >> /etc/network/interfaces
 
 auto $NETCARD_NAME
 iface $NETCARD_NAME inet static
@@ -22,7 +28,10 @@ iface $NETCARD_NAME inet static
     gateway $GATEWAY
     dns-nameservers $DNS1 $DNS2
 EOF
-fi
+
+# Redémarre le réseau
+systemctl restart networking
+
 
 systemctl restart networking
 # Mise à jour de la machine Debian 13
