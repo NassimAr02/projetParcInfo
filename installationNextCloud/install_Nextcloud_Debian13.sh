@@ -12,11 +12,7 @@ DNS1="10.59.100.101"
 DNS2="10.59.100.101"
 
 
-# Redémarre le réseau
-systemctl restart networking
 
-
-systemctl restart networking
 # Mise à jour de la machine Debian 13
 echo "[1/7] ➤ Mise à jour de la machine"
 sleep 3
@@ -112,4 +108,6 @@ iface $NETCARD_NAME inet static
     gateway $GATEWAY
     dns-nameservers $DNS1 $DNS2
 EOF
+# Redémarre le réseau
+systemctl restart networking
 reboot now
