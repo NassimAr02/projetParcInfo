@@ -10,24 +10,7 @@ NETCARD_NAME="ens18"
 GATEWAY="10.59.20.253"
 DNS1="10.59.100.101"
 DNS2="10.59.100.101"
-echo "[0/7] ➤ Attribution d'une IP fixe"
-sleep 3
-# Sauvegarde l'ancien fichier
-cp /etc/network/interfaces /etc/network/interfaces.bak
 
-# Supprime toute configuration existante pour la carte
-sed -i "/$NETCARD_NAME/,+4d" /etc/network/interfaces
-
-# Ajoute la configuration statique
-cat <<EOF >> /etc/network/interfaces
-
-auto $NETCARD_NAME
-iface $NETCARD_NAME inet static
-    address $NEXTCLOUD_IP
-    netmask 255.255.255.0
-    gateway $GATEWAY
-    dns-nameservers $DNS1 $DNS2
-EOF
 
 # Redémarre le réseau
 systemctl restart networking
@@ -111,4 +94,22 @@ apachectl -t
 read -n 1 -s -r -p "Appuyez sur une touche si la syntaxe est valide..."
 
 systemctl restart apache2
+echo "[0/7] ➤ Attribution d'une IP fixe"
+sleep 3
+# Sauvegarde l'ancien fichier
+cp /etc/network/interfaces /etc/network/interfaces.bak
+
+# Supprime toute configuration existante pour la carte
+sed -i "/$NETCARD_NAME/,+4d" /etc/network/interfaces
+
+# Ajoute la configuration statique
+cat <<EOF >> /etc/network/interfaces
+
+auto $NETCARD_NAME
+iface $NETCARD_NAME inet static
+    address $NEXTCLOUD_IP
+    netmask 255.255.255.0
+    gateway $GATEWAY
+    dns-nameservers $DNS1 $DNS2
+EOF
 reboot now
