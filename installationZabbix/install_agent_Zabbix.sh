@@ -2,7 +2,7 @@
 #Installation Automatisé d'un agent zabbix pour les machines debian 13
 #par nassim.arrasspro@gmail.com
 
-SERVER_IP=xxx.xxx.xxx.xxx #Mettre l'IP du Server zabbix
+SERVER_IP=10.59.100.98 #Mettre l'IP du Server zabbix
 FICHIER_CONF="/etc/zabbix/zabbix_agent2.conf"
 #Mise à jour de la machine 
 echo "[1/5] ➤ Mise à jour de la machine"
@@ -11,7 +11,7 @@ apt update && apt upgrade -y
 #Récupération de l'archive et ajout des dépots
 echo  "[2/5] ➤ Récupération de l'archive" 
 wget https://repo.zabbix.com/zabbix/8.0/release/debian/pool/main/z/zabbix-release/zabbix-release_8.0-0.1%2Bdebian13_all.deb
-dpkg -i zabbix-release_8.0-0.1+debian13_all.deb.2
+dpkg -i zabbix-release_8.0-0.1+debian13_all.deb
 
 #Installation de l'agent 
 echo "[3/5] ➤ Installation de l'agent"
