@@ -60,14 +60,14 @@
     {"name":"Laptop-058","type":"Portable","model":"Asus ExpertBook B5","serial":"ASEBB5-058","os":"Windows 11 Pro","monitor":"Asus 14'' IPS","software":["Office 365","Teams","Photoshop"],"license":"OEM-WIN11-058"},
     {"name":"Laptop-059","type":"Portable","model":"Acer Chromebook Spin 13","serial":"ACCHSPIN13-059","os":"ChromeOS","monitor":"Acer 13'' IPS","software":["Google Docs","Google Sheets","Chrome"],"license":"OEM-CHROME-059"},
     {"name":"Laptop-060","type":"Portable","model":"Apple MacBook Pro M4","serial":"MBPRO-060","os":"macOS Sequoia","monitor":"Apple Retina 14''","software":["Office 365","Safari","Final Cut Pro"],"license":"OEM-MAC-060"},
-	{"name":"Laptop-061","type":"Portable","model":"Dell Latitude 7520","serial":"DL7520-061","os":"Windows 11 Pro","monitor":"Dell 15'' FHD","software":["Office 365","Teams","Zoom"],"license":"OEM-WIN11-061"},
+	  {"name":"Laptop-061","type":"Portable","model":"Dell Latitude 7520","serial":"DL7520-061","os":"Windows 11 Pro","monitor":"Dell 15'' FHD","software":["Office 365","Teams","Zoom"],"license":"OEM-WIN11-061"},
     {"name":"Laptop-062","type":"Portable","model":"HP EliteBook 855 G8","serial":"HP855G8-062","os":"Windows 10 Pro","monitor":"HP 15'' IPS","software":["Office 2019","Bitdefender","Chrome"],"license":"VOL-WIN10-062"},
     {"name":"Laptop-063","type":"Portable","model":"Lenovo ThinkPad X1 Yoga","serial":"LTP-X1YOGA-063","os":"Ubuntu 22.04 LTS","monitor":"Lenovo 14'' IPS","software":["LibreOffice","Thunderbird","Firefox"],"license":"GPL-LINUX-063"},
     {"name":"Laptop-064","type":"Portable","model":"Asus ZenBook Pro Duo","serial":"ASZBPRODUO-064","os":"Windows 11 Pro","monitor":"Asus 15'' OLED","software":["Office 365","Teams","Photoshop"],"license":"OEM-WIN11-064"},
     {"name":"Laptop-065","type":"Portable","model":"Acer Swift X","serial":"ACSWX-065","os":"Windows 10 Pro","monitor":"Acer 14'' IPS","software":["Office 2019","Zoom","AutoCAD"],"license":"VOL-WIN10-065"},
     {"name":"Laptop-066","type":"Portable","model":"Apple MacBook Pro M3","serial":"MBPRO-066","os":"macOS Sequoia","monitor":"Apple Retina 14''","software":["Office 365","Safari","Final Cut Pro"],"license":"OEM-MAC-066"},
     {"name":"Laptop-067","type":"Portable","model":"Dell Inspiron 16","serial":"DINSP16-067","os":"Windows 11 Pro","monitor":"Dell 16'' IPS","software":["Office 365","Teams","Zoom"],"license":"OEM-WIN11-067"},
-    {"name":"Laptop-068","type":"Portable","model":"HP ZBook Firefly 14","serial":"HPZBFF14-068","os":"Windows 10 Pro","monitor":"HP 14'' IPS","software":["Office 2019","Bitdefender","Thunderbird"],"license":"VOL-WIN10-068"},
+    {"name":"Laptop-068","type":"Portable","model":"HP ZBook Firefly 14","serial":"HPZBFF14-068","os":"Windows 10 Pro","monitor":"HP 14'' IPS","software":["Office 2019","Bitdefender","Thunderbird"],"license":"VOL-WIN10-068"}
 
   ]
 }
