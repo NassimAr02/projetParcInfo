@@ -24,8 +24,6 @@ apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-sql-scripts zabbix
 php-mysql php-gd php-bcmath php-mbstring php-xml php-ldap
 echo "[X] ➤ Configuration Apache pour Zabbix..."
 sleep 2
-apt install -y libapache2-mod-php
-a2enmod php
 
 cat <<EOF > /etc/apache2/conf-available/zabbix.conf
 Alias /zabbix /usr/share/zabbix/ui
