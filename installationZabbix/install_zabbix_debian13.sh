@@ -20,7 +20,7 @@ clear
 # Installation des paquets Zabbix + Agent + Apache
 echo "[2/8] ➤ Installation de Zabbix server, frontend PHP, agent..."
 sleep 3
-apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-sql-scripts zabbix-agent
+apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-sql-scripts zabbix-agent apache2
 
 # Installation de MariaDB
 echo "[3/8] ➤ Installation de MariaDB..."
