@@ -20,7 +20,8 @@ clear
 # Installation des paquets Zabbix + Agent + Apache
 echo "[2/8] ➤ Installation de Zabbix server, frontend PHP, agent..."
 sleep 3
-apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-sql-scripts zabbix-agent apache2
+apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-sql-scripts zabbix-agent apache2 \
+php-mysql php-gd php-bcmath php-mbstring php-xml php-ldap
 echo "[X] ➤ Configuration Apache pour Zabbix..."
 sleep 2
 
@@ -42,8 +43,7 @@ Alias /zabbix /usr/share/zabbix/ui
 EOF
 
 a2enconf zabbix
-systemctl reload apache2
-
+systemctl restart apache2
 # Installation de MariaDB
 echo "[3/8] ➤ Installation de MariaDB..."
 sleep 3
