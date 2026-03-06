@@ -24,6 +24,8 @@ apt install -y zabbix-server-mysql zabbix-frontend-php zabbix-sql-scripts zabbix
 php-mysql php-gd php-bcmath php-mbstring php-xml php-ldap
 echo "[X] ➤ Configuration Apache pour Zabbix..."
 sleep 2
+apt install -y libapache2-mod-php
+a2enmod php
 
 cat <<EOF > /etc/apache2/conf-available/zabbix.conf
 Alias /zabbix /usr/share/zabbix/ui
@@ -32,18 +34,12 @@ Alias /zabbix /usr/share/zabbix/ui
     Options FollowSymLinks
     AllowOverride None
     Require all granted
-
-    php_value max_execution_time 300
-    php_value memory_limit 128M
-    php_value post_max_size 16M
-    php_value upload_max_filesize 2M
-    php_value max_input_time 300
-    php_value date.timezone Europe/Paris
 </Directory>
 EOF
 
 a2enconf zabbix
 systemctl restart apache2
+
 # Installation de MariaDB
 echo "[3/8] ➤ Installation de MariaDB..."
 sleep 3
